@@ -10,15 +10,9 @@ const createUserTable = async () => {
     )
   `;
 
-  // try {
-  //   const [results, fields] = await db.promise().query(query);
-  //   console.log('User table created or already exists');
-  // } catch (err) {
-  //   console.error('Error creating user table:', err);
-  //   throw err;
-  // }
+
   try {
-    // Ensure using promise-based query
+    
     const [results, fields] = await db.query(query);
     console.log('User table created or already exists');
   } catch (err) {
